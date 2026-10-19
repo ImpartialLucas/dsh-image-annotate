@@ -6,17 +6,20 @@
 > its extracted text, the notes, and a **host-side freeze-frame** of the screen captured the instant
 > you armed the tool (before the overlay paints), so the agent can crop the exact pixels you saw.
 >
-> 
+> ```bash
+> dsh plugin --profile web add dsh-image-annotate
+> ```
 >
-> Requires DSH . The  profile is Electron-managed: install it through the
-> Plugin Hub UI or .
+> Requires DSH `0.2.1-rc.2+`. The `desktop` profile is Electron-managed: install it through the
+> Plugin Hub UI, or via `runCli({ manageDesktopProfile: true })`.
 >
 > MIT licensed. Issues and PRs welcome.
+>
 # dsh-image-annotate
 
 DSH 的「请求修改」插件：在**右侧栏**里框选内容、逐块写注释，一次性发进对话。
 
-> 当前版本 **v0.6.2**　|　目标环境 DSH 0.2.1-rc.2（desktop profile）
+> 当前版本 **v0.7.1**　|　目标环境 DSH 0.2.1-rc.2（desktop profile）
 
 ---
 
