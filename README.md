@@ -50,13 +50,13 @@ DSH 的「请求修改」插件：在**右侧栏**里框选内容、逐块写注
 
 ```powershell
 cd C:\Users\lenovo\Desktop\学科
-node _work\add-desktop-plugin.mjs plugin --profile desktop add "file:C:/dsh-plugins-build/dsh-image-annotate-0.6.1.tgz"
+node "C:/Users/lenovo/Desktop/AI_test/dsh-plugins/tools/add-desktop-plugin.mjs" plugin --profile desktop add "file:C:/Users/lenovo/Desktop/AI_test/dsh-plugins/build/dsh-image-annotate-0.7.1.tgz"
 ```
 
 卸载：
 
 ```powershell
-node _work\add-desktop-plugin.mjs plugin --profile desktop remove dsh-image-annotate
+node "C:/Users/lenovo/Desktop/AI_test/dsh-plugins/tools/add-desktop-plugin.mjs" plugin --profile desktop remove dsh-image-annotate
 ```
 
 **必须打包成 tarball 再装**，不要用 `file:<目录>`：目录安装会留下指向
@@ -67,12 +67,12 @@ node _work\add-desktop-plugin.mjs plugin --profile desktop remove dsh-image-anno
 ```powershell
 cd C:\Users\lenovo\Desktop\学科\_plugins\dsh-image-annotate
 node -e "..."                                   # 升版本号
-rm -rf /c/dsh-plugins-build/dsh-image-annotate
-cp -r . /c/dsh-plugins-build/dsh-image-annotate
-cd /c/dsh-plugins-build/dsh-image-annotate && npm pack
+rm -rf /c/Users/lenovo/Desktop/AI_test/dsh-plugins/build/dsh-image-annotate
+cp -r . /c/Users/lenovo/Desktop/AI_test/dsh-plugins/build/dsh-image-annotate
+cd /c/Users/lenovo/Desktop/AI_test/dsh-plugins/build/dsh-image-annotate && npm pack
 cd C:\Users\lenovo\Desktop\学科
-node _work\add-desktop-plugin.mjs plugin --profile desktop remove dsh-image-annotate
-node _work\add-desktop-plugin.mjs plugin --profile desktop add "file:C:/dsh-plugins-build/dsh-image-annotate-<ver>.tgz"
+node "C:/Users/lenovo/Desktop/AI_test/dsh-plugins/tools/add-desktop-plugin.mjs" plugin --profile desktop remove dsh-image-annotate
+node "C:/Users/lenovo/Desktop/AI_test/dsh-plugins/tools/add-desktop-plugin.mjs" plugin --profile desktop add "file:C:/Users/lenovo/Desktop/AI_test/dsh-plugins/build/dsh-image-annotate-<ver>.tgz"
 ```
 
 然后 **Ctrl+Shift+R** 硬刷新。
@@ -121,10 +121,10 @@ dsh-image-annotate/
 
 ## 五、本地测试台（不需要 DSH 也能测）
 
-`C:\dsh-test\` 是一套独立验证环境：
+`C:\Users\lenovo\Desktop\AI_test\dsh-plugins\harness\` 是一套独立验证环境：
 
 ```
-C:\dsh-test\
+C:\Users\lenovo\Desktop\AI_test\dsh-plugins\harness\
 ├── index.html     # 假 DSH 页面：假侧栏 + 假服务 + mock ModuleLoader
 ├── client.js      # 插件副本（每次改完 source 覆盖过来）
 └── node_modules\  # react@18 UMD
@@ -133,7 +133,7 @@ C:\dsh-test\
 启动：
 
 ```powershell
-cd C:\dsh-test
+cd C:\Users\lenovo\Desktop\AI_test\dsh-plugins\harness
 python -m http.server 8877 --bind 127.0.0.1
 # 浏览器打开 http://127.0.0.1:8877/index.html
 ```

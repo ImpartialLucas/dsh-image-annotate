@@ -95,7 +95,7 @@ git push -u origin main
 ## 注意事项
 
 1. **版本号**：当前 `0.7.1`（pre-1.0）。如果你认为功能已经稳定，可以先改成 `1.0.0` 再发首版 —— 首版就是 1.0.0 更干净。
-2. **不要发布 `_work/` 与测试台**：`files` 白名单已经限制了打包内容，`C:\dsh-test\` 根本不在包目录里，安全。
+2. **不要发布 `_work/` 与测试台**：`files` 白名单已经限制了打包内容，`C:\Users\lenovo\Desktop\AI_test\dsh-plugins\harness\` 根本不在包目录里，安全。
 3. **`desktop` profile 用户无法用 CLI 安装**（Electron 独占保护），README 里已注明走 Plugin Hub。
 4. 发布前最后检查：`npm pack --dry-run` 确认文件列表没有意外内容。
 
