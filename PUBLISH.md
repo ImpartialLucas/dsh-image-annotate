@@ -12,7 +12,7 @@
 | LICENSE | ✅ MIT |
 | `files` 白名单 | ✅ 9 个文件，28.9 kB |
 | `npm pack --dry-run` | ✅ 通过 |
-| 本地 git 仓库 | ✅ 已初始化并提交（10 个文件，commit `3a9034d`） |
+| GitHub 仓库 | ✅ **已创建并推送** → https://github.com/ImpartialLucas/dsh-image-annotate |
 | npm 登录 | ❌ **未登录** |
 | GitHub 建仓权限 | ❌ 无 token、无 `gh`（但 SSH 推代码已认证为 `ImpartialLucas`） |
 

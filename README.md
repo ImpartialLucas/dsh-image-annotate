@@ -239,3 +239,22 @@ POST /dsh-image-annotate/capture  ->  { ok, path, w, h, at }
 ---
 
 *最后更新：2026-10-19　v0.7.0*
+
+## 从源码 / GitHub 安装
+
+仓库已开源：**<https://github.com/ImpartialLucas/dsh-image-annotate>**
+
+```powershell
+# 方式一：npm（待发布后可用）
+dsh plugin --profile web add dsh-image-annotate
+
+# 方式二：直接从 GitHub 仓库
+git clone git@github.com:ImpartialLucas/dsh-image-annotate.git
+cd dsh-image-annotate
+npm pack
+dsh plugin --profile web add "file:<绝对路径>/dsh-image-annotate-0.7.1.tgz"
+```
+
+> `desktop` profile 被 Electron 独占，CLI 会拒绝；请走插件市场 UI，
+> 或用 `runCli({ manageDesktopProfile: true })` 通道（本仓库根目录的 `_work/add-desktop-plugin.mjs` 就是那个三行脚本）。
+
