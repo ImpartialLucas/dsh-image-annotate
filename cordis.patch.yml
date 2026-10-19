@@ -1,0 +1,7 @@
+# dsh-image-annotate bundle patch
+#
+# One insert row: the plugin's host half is a no-op, the client half registers a
+# file viewer for images into dsh-better-sidebar's viewer registry.
+- insert:
+    - id: image-annotate
+      name: dsh-image-annotate

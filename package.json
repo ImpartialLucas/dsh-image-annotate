@@ -1,0 +1,54 @@
+{
+  "name": "dsh-image-annotate",
+  "version": "0.7.1",
+  "type": "module",
+  "description": "DSH marquee request-changes: drag a rectangle inside the right sidebar, annotate each region, and send them as one message carrying its notes, its text, and a host-side freeze-frame of the screen.",
+  "license": "MIT",
+  "author": "ImpartialLucas",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "annotation",
+    "marquee",
+    "screenshot",
+    "request-changes"
+  ],
+  "exports": {
+    ".": {
+      "default": "./index.js"
+    },
+    "./client": {
+      "default": "./client.js"
+    }
+  },
+  "icon": "./icon.svg",
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "icon.svg",
+    "locale/*.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-session",
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-slots",
+        "@deepseek-ai/dsh-client-modules"
+      ]
+    },
+    "manifestVersion": 1
+  }
+}
