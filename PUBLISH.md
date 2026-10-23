@@ -1,20 +1,19 @@
 # 发布指南
 
-本包已准备好发布，但**发布动作需要你的凭据**（npm 登录 / GitHub 账号）。
-下面是两条路线，任选其一（也可以都做）。
+> **2026-10-23 更新：两条路线都已完成** —— npm 上已有 `dsh-image-annotate@0.7.1`，GitHub 仓库已公开并已提交插件市场收录（[dsh-plugin-hub#407](https://github.com/dshplugin/dsh-plugin-hub/issues/407)）。以下内容保留为发布流程记录。
 
 当前状态：
 
 | 项 | 状态 |
 |---|---|
-| 包名 `dsh-image-annotate`（npm） | ✅ **可用**（未占用） |
+| 包名 `dsh-image-annotate`（npm） | ✅ **已发布 v0.7.1**（latest） |
 | `private` 字段 | ✅ 已移除 |
 | LICENSE | ✅ MIT |
 | `files` 白名单 | ✅ 9 个文件，28.9 kB |
 | `npm pack --dry-run` | ✅ 通过 |
 | GitHub 仓库 | ✅ **已创建并推送** → https://github.com/ImpartialLucas/dsh-image-annotate |
-| npm 登录 | ❌ **未登录** |
-| GitHub 建仓权限 | ❌ 无 token、无 `gh`（但 SSH 推代码已认证为 `ImpartialLucas`） |
+| npm 登录 | ✅ `impartial_lucas`（2FA: auth-and-writes） |
+| GitHub 建仓权限 | ✅ 已创建并推送（SSH 认证为 `ImpartialLucas`） |
 
 ---
 

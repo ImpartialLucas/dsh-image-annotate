@@ -245,7 +245,7 @@ POST /dsh-image-annotate/capture  ->  { ok, path, w, h, at }
 仓库已开源：**<https://github.com/ImpartialLucas/dsh-image-annotate>**
 
 ```powershell
-# 方式一：npm（待发布后可用）
+# 方式一：npm（已发布 v0.7.1 → https://www.npmjs.com/package/dsh-image-annotate）
 dsh plugin --profile web add dsh-image-annotate
 
 # 方式二：直接从 GitHub 仓库
